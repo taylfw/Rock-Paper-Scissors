@@ -7,6 +7,9 @@ user = ''
 space = '##########################'
 #the clear variable works on linux systems only (wrote this on ubuntu)
 clear = lambda: os.system('clear')
+score = 0
+cpuScore = 0
+
 while user != 'q':
     prompt = "Choose your weapon!"
     prompt += "\nor press 'q' to quite"
@@ -17,10 +20,12 @@ while user != 'q':
 
     user = input(prompt)
     computer = random.randint(1, 3)
+    
 
 
     def shoot(player, cpu):
-    
+        global score
+        global cpuScore
         
         weapons = {
             "1" : "Rock",
@@ -43,6 +48,8 @@ while user != 'q':
             print("Computer chose: ", weapons[str(cpu)])
             print("YOU WIN!!!!")
             print(space)
+            score += 1
+            return score
 
         else:
             clear()
@@ -51,10 +58,14 @@ while user != 'q':
             print("Computer chose: ", weapons[str(cpu)])
             print("You suck!")
             print(space)
+            cpuScore += 1
+            return cpuScore
 
     if user == 'q':
         clear()
         print("You quit.")
+        print("Your score is ", score)
+        print("The computer's score is ", cpuScore)
         break
     
     else:
