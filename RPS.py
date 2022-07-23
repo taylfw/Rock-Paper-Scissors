@@ -67,6 +67,10 @@ while user != 'q':
         print("Your score is ", score)
         print("The computer's score is ", cpuScore)
         break
-    
+
+    elif not (user == '1' or user == '2' or user == '3'):
+        print(space)
+        print(user + " is not a valid choice")
+        print(space)
     else:
         shoot(user, computer)
