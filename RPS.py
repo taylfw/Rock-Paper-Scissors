@@ -5,6 +5,7 @@ import random
 import os
 user = ''
 space = '##########################'
+#the clear variable works on linux systems only (wrote this on ubuntu)
 clear = lambda: os.system('clear')
 while user != 'q':
     prompt = "Choose your weapon!"
@@ -57,5 +58,4 @@ while user != 'q':
         break
     
     else:
-
         shoot(user, computer)
