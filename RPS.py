@@ -66,6 +66,14 @@ while user != 'q':
         print("You quit.")
         print("Your score is ", score)
         print("The computer's score is ", cpuScore)
+        if score > cpuScore:
+            print(space)
+            print("You beat the computer!!!")
+            print(space)
+        else:
+            print(space)
+            print("The computer wins and told me to tell you; \n110100010101100010110010101")
+            print(space)
         break
 
     elif not (user == '1' or user == '2' or user == '3'):
