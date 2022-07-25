@@ -3,6 +3,7 @@
 from click import prompt
 import random
 import os
+import time
 user = ''
 space = '##########################'
 #the clear variable works on linux systems only (wrote this on ubuntu)
@@ -33,6 +34,20 @@ while user != 'q':
             "3" : "Scissors"
             }
         player = int(player)
+
+        clear()
+        print("Rock!")
+        time.sleep(0.70)
+        clear()
+        print("Paper!")
+        time.sleep(0.70)
+        clear()
+        print("Scissors!")
+        time.sleep(0.70)
+        clear()
+        print("Shoot!")
+        time.sleep(0.70)
+
 
         if player == cpu:
             clear()
@@ -70,9 +85,13 @@ while user != 'q':
             print(space)
             print("You beat the computer!!!")
             print(space)
-        else:
+        elif score < cpuScore:
             print(space)
             print("The computer wins and told me to tell you; \n110100010101100010110010101")
+            print(space)
+        else:
+            print(space)
+            print("Tie Game.")
             print(space)
         break
 
