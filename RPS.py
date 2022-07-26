@@ -8,6 +8,8 @@ import emoji
 user = ''
 space = '##########################'
 #the clear variable works on linux systems only (wrote this on ubuntu)
+#for windows users, just uncomment the next line & comment out line 13
+#clear = lambda: os.system(‘cls’) 
 clear = lambda: os.system('clear')
 score = 0
 cpuScore = 0
