@@ -6,4 +6,4 @@
 
 >pip install emoji --upgrade  
 
-Run it in the commandline :)
+
