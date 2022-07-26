@@ -4,6 +4,7 @@ from click import prompt
 import random
 import os
 import time
+import emoji
 user = ''
 space = '##########################'
 #the clear variable works on linux systems only (wrote this on ubuntu)
@@ -12,7 +13,7 @@ score = 0
 cpuScore = 0
 
 while user != 'q':
-
+    
     prompt = "Choose your weapon!"
     prompt += "\nor press 'q' to quit"
     prompt += "\n1) Rock"
@@ -24,7 +25,7 @@ while user != 'q':
 
     computer = random.randint(1, 3)
     
-
+   
 
     def shoot(player, cpu):
 
@@ -41,13 +42,13 @@ while user != 'q':
         player = int(player)
 
         clear()
-        print("Rock!")
+        print("Rock!", emoji.emojize(":rock:", language='alias'))
         time.sleep(0.70)
         clear()
-        print("Paper!")
+        print("Paper!", emoji.emojize(":scroll:", language='alias'))
         time.sleep(0.70)
         clear()
-        print("Scissors!")
+        print("Scissors!", emoji.emojize(":scissors:", language='alias'))
         time.sleep(0.70)
         clear()
         print("Shoot!")
