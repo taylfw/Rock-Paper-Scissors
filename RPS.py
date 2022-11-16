@@ -59,16 +59,16 @@ while user != 'q':
         if player == cpu:
             clear()
             print(space)
-            print("User chose: ", weapons[str(player)])
-            print("Computer chose: ", weapons[str(cpu)])
+            print(emoji.emojize(":person:", language='alias')+" chose: ", weapons[str(player)])
+            print( emoji.emojize(":robot:", language='alias')+" chose: ", weapons[str(cpu)])
             print("Draw!")
             print(space)
 
         elif player == cpu + 1 or player == cpu - 2:
             clear()
             print(space)
-            print("User chose: ", weapons[str(player)])
-            print("Computer chose: ", weapons[str(cpu)])
+            print(emoji.emojize(":person:", language='alias')+" chose: ", weapons[str(player)])
+            print(emoji.emojize(":robot:", language='alias')+" chose: ", weapons[str(cpu)])
             print("YOU WIN!!!!")
             print(space)
             score += 1
@@ -77,9 +77,9 @@ while user != 'q':
         else:
             clear()
             print(space)
-            print("User chose: ", weapons[str(player)])
-            print("Computer chose: ", weapons[str(cpu)])
-            print("You suck!")
+            print(emoji.emojize(":person:", language='alias')+" chose: ", weapons[str(player)])
+            print(emoji.emojize(":robot:", language='alias')+" chose: ", weapons[str(cpu)])
+            print("You lose!")
             print(space)
             cpuScore += 1
             return cpuScore
@@ -94,13 +94,17 @@ while user != 'q':
         if score > cpuScore:
 
             print(space)
-            print("You beat the computer!!!")
+            print("You beat the computer!!!"+
+            "\n"+emoji.emojize(":fireworks:", language='alias')
+            )
             print(space)
 
         elif score < cpuScore:
 
             print(space)
-            print("The computer wins and told me to tell you; \n110100010101100010110010101")
+            print(emoji.emojize(":robot:", language='alias')+" Computer wins..."+
+            " \n110100010101100010110010101"+ "\n"+emoji.emojize(":person_facepalming:", language='alias')+" You Lose!")
+            
             print(space)
             
         else:
