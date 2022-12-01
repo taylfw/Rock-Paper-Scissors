@@ -8,7 +8,7 @@ import emoji
 user = ''
 space = '##########################'
 #the clear variable works on linux systems only (wrote this on ubuntu)
-#for windows users, just uncomment the next line & comment out line 13
+#for windows users, just uncomment the next line & comment out line 13         
 #clear = lambda: os.system(‘cls’) 
 clear = lambda: os.system('clear')
 score = 0
@@ -103,7 +103,7 @@ while user != 'q':
 
             print(space)
             print(emoji.emojize(":robot:", language='alias')+" Computer wins..."+
-            " \n110100010101100010110010101"+ "\n"+emoji.emojize(":person_facepalming:", language='alias')+" You Lose!")
+            "\n"+emoji.emojize(":person_facepalming:", language='alias')+" You Lose!")
             
             print(space)
             
